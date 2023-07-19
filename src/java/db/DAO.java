@@ -44,13 +44,14 @@ public class DAO {
 
         try {
             conn = getConnection();
-            pstmt = conn.prepareStatement("INSERT INTO contactos(apodo,nombre,apellido,telefono,correo,fecha_nacimiento) VALUES(?,?,?,?,?,?);");
+            pstmt = conn.prepareStatement("INSERT INTO contactos(apodo,nombre,apellido,telefono,correo,genero,fecha_nacimiento) VALUES(?,?,?,?,?,?,?);");
             pstmt.setString(1, c.getApodo());
             pstmt.setString(2, c.getNombre());
             pstmt.setString(3, c.getApellido());
             pstmt.setString(4, c.getTelefono());
             pstmt.setString(5, c.getCorreo());
-            pstmt.setString(6, c.getFechaNacimiento());
+            pstmt.setString(6, c.getGenero());
+            pstmt.setString(7, c.getFechaNacimiento());
             pstmt.execute();
         } catch (SQLException ex) {
             System.err.println("Error al guardar datos en la base de datos\nDETALLES: " + ex.getMessage());

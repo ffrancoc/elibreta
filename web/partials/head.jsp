@@ -10,4 +10,5 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><%= request.getParameter("titulo") %></title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css"/>
 </head>
